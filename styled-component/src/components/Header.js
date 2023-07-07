@@ -15,9 +15,10 @@ export default function Header() {
           <div>
             <h1>Laboris aliqua anim deserunt enim incididunt esse sunt.</h1>
             <p>Est duis non aliquip aliquip magna laboris. Occaecat dolore esse occaecat nisi aliquip nostrud anim. Quis ea adipisicing sunt laboris excepteur magna amet esse. Nostrud labore tempor consequat elit ad. Minim consequat incididunt cillum velit aliqua est occaecat elit. Cupidatat tempor sit Lorem elit elit velit do fugiat occaecat culpa.</p>
+            <Button bg="#ff0099" color="#fff">Get Started For Free</Button>
           </div>
 
-          <Image src="./images/illustration-mockups.svg" alt=""></Image>
+          <Image src="./images/illustration-mockups.svg" alt=""/>
         </Flex>
       </Container>
     </StyledHeader>
