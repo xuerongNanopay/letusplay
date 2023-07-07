@@ -6,6 +6,7 @@ import Card from "./components/Card";
 import GlobalStyles from "./components/styles/Global";
 
 import contents from "./contents";
+import Footer from "./components/Footer";
 
 const theme = {
   colors: {
@@ -26,6 +27,7 @@ function App() {
             return <Card key={index} item={item}/>
         })}
       </Container>
+      <Footer/>
     </ThemeProvider>
   );
 }
