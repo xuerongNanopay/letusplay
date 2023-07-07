@@ -1,9 +1,10 @@
 import { Container } from "./styles/Container.styled"
 import { Flex } from "./styles/Flex.styles"
+import { StyledFooter } from "./styles/Footer.styled"
 
 export default function Footer() {
   return (
-    <div>
+    <StyledFooter>
       <Container>
         <img src="./images/logo_white.save" alt="" />
 
@@ -26,6 +27,6 @@ export default function Footer() {
         </Flex>
         <p>&copy; vvvvvv</p>
       </Container>
-    </div>
+    </StyledFooter>
   )
 }
