@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Chart.js - Axes Basic</title>
+</head>
+<body>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    // let chart = new Chart(ctx, {
+    //   type: 'line'
+    // });
+
+    // let chart = new Chart(ctx, {
+    //   type: 'bar',
+    //   data: {
+    //     datasets: [{
+    //       data: [1, 2, 3]
+    //     }]
+    //   },
+    //   options: {
+    //     scales: {
+    //       myScale: {
+    //         type: 'logarithmic',
+    //         position: 'right', // `axis` is determined by the position as `'y'`
+    //       }
+    //     }
+    //   }
+    // });
+    let chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        datasets: [{
+          yAxisID: 'yAxis'
+        }]
+      },
+      options: {
+        scales: {
+          xAxis: {
+            // The axis for this scale is determined from the first letter of the id as `'x'`
+            // It is recommended to specify `position` and / or `axis` explicitly.
+            type: 'time',
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
