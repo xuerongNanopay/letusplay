@@ -39,11 +39,12 @@ function Circle(x, y, dx, dy, radius) {
 
 var circleArray = [];
 for ( let i = 0 ; i < 100 ; i++ ) {
-  const x = Math.random() * innerWidth;
-  const y = Math.random() * innerHeight;
+  const radius = 30;
+  const diameter = radius*2;
+  const x = Math.random() * (innerWidth - diameter) + radius;
+  const y = Math.random() * (innerHeight - diameter) + radius;
   const dx = (Math.random()-0.5) * 10;
   const dy = (Math.random()-0.5) * 10;
-  const radius = 30;
   const circle = new Circle(x, y, dx, dy, radius);
   circleArray.push(circle);
 }
