@@ -6,6 +6,8 @@ const c = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 
+const gravity = 1;
+const fraction = 0.95;
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
@@ -26,11 +28,17 @@ addEventListener('resize', () => {
   init()
 })
 
+addEventListener('click', () => {
+  init();
+})
+
 // Objects
-class Object {
-  constructor(x, y, radius, color) {
+class Ball {
+  constructor(x, y, dx, dy, radius, color) {
     this.x = x
+    this.dx = dx;
     this.y = y
+    this.dy = dy;
     this.radius = radius
     this.color = color
   }
@@ -40,21 +48,39 @@ class Object {
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
     c.fillStyle = this.color
     c.fill()
+    c.stroke()
     c.closePath()
   }
 
   update() {
+    if ( this.y + this.radius + this.dy > canvas.height ) {
+      this.dy = -this.dy * fraction;
+    } else {
+      this.dy += gravity;
+    }
+
+    if ( this.x + this.radius + this.dx > canvas.width ||
+      this.x - this.radius <= 0
+    ) {
+      this.dx = -this.dx;
+    }
+    this.x += this.dx;
+    this.y += this.dy;
     this.draw()
   }
 }
 
 // Implementation
-let objects
+let ballArray = [];
 function init() {
-  objects = []
-
-  for (let i = 0; i < 400; i++) {
-    // objects.push()
+  ballArray = [];
+  for ( let i = 0 ; i < 100 ; i++ ) {
+    const radius = utils.randomIntFromRange(15, 30);
+    const x = utils.randomIntFromRange(radius, canvas.width-radius);
+    const y = utils.randomIntFromRange(0, canvas.height-radius);
+    const dx = utils.randomIntFromRange(-2, 2);
+    const dy = utils.randomIntFromRange(-2, 2)
+    ballArray.push(new Ball(x, y, dx, dy, radius, utils.randomColor(colors)));
   }
 }
 
@@ -62,11 +88,7 @@ function init() {
 function animate() {
   requestAnimationFrame(animate)
   c.clearRect(0, 0, canvas.width, canvas.height)
-
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y)
-  // objects.forEach(object => {
-  //  object.update()
-  // })
+  ballArray.forEach(b => b.update());
 }
 
 init()
