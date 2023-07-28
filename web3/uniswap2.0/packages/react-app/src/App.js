@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <header class={styles.header}>
+        <header className={styles.header}>
           <img
             src={uniswapLogo}
             alt="uniswap logo"
@@ -31,8 +31,8 @@ const App = () => {
                 <p className="text-white"></p>
                 {
                   account ? (
-                    poolsLoading ? <Loader/> : <Exchange/>
-                  ) : <Loader/>
+                    poolsLoading ? <Loader title="Loading pools, please wait!"/> : <Exchange/>
+                  ) : <Loader title="Please connect your wallet"/>
                 }
               </div>
               <div className="blue_gradient"></div>
