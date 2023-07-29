@@ -33,7 +33,6 @@ const Nav = () => {
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-
       <div className="hidden sm:flex">
         {
           session?.user ? 
@@ -55,10 +54,10 @@ const Nav = () => {
 
             <Link href="/profile">
               <Image
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
-                className="round-full"
+                className="rounded-full"
                 alt="profile"
               />
             </Link>
@@ -92,10 +91,10 @@ const Nav = () => {
           session?.user ? (
             <div className="flex">
               <Image
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
-                className="round-full"
+                className="rounded-full"
                 alt="profile"
                 onClick={() => {setToggleDropDown(pre => !pre)}}
               />
