@@ -1,3 +1,4 @@
+import Feed from '@components/Feed'
 import React from 'react'
 
 const Home = () => {
@@ -7,6 +8,8 @@ const Home = () => {
       <br className="max-md:hidden"/>
       <span className="orange_gradient text-center">AI-Powered Prompts</span>
       <p className="desc text-center">Promptopia is an open-source AI prompting tool for modern world to discover, crate and share creative prompts</p>
+
+      <Feed/>
     </section>
   )
 }
