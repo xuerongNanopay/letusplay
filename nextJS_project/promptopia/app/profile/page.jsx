@@ -32,7 +32,7 @@ const MyProfile = () => {
     <Profile
       name="My"
       desc="Welcome to your persinalize profile page"
-      data={posts}
+      posts={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}
     />
