@@ -4,10 +4,30 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { userRouter } from 'next/navigation'
 
-const Profile = () => {
+import Profile from '@components/profile'
+
+const MyProfile = () => {
+  const handleEdit = () => {
+
+  }
+
+  const handleDelete = async () => {
+
+  }
+
+  useEffect(() => {
+
+  }, [])
+
   return (
-    <div>Profile</div>
+    <Profile
+      name="My"
+      desc="Welcome to your persinalize profile page"
+      data={[]}
+      handleEdit={handleEdit}
+      handleDelete={handleDelete}
+    />
   )
 }
 
-export default Profile
+export default MyProfile
