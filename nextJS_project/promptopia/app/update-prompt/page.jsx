@@ -35,11 +35,10 @@ const EditPrompt = () => {
     setSubmitting(true)
 
     try {
-      const response = await fetch('/api/prompt/new', {
-        method: 'POST',
+      const response = await fetch(`/api/prompt/${promptId}`, {
+        method: 'PATCH',
         body: JSON.stringify({
           prompt: post.prompt,
-          userId: session?.user.id,
           tag: post.tag
         })
       })
