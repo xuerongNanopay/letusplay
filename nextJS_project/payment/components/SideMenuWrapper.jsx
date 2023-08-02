@@ -5,9 +5,12 @@ import SideMenu from "./SideMenu"
 
 const SideMenuWrapper = ({children, toggleSideBar}) => {
   return (
-    <div>
+    <div className="flex">
+      {/* drawer and side menu */}
       <SideMenu/>
-      {children}
+      <div>
+        {children}
+      </div>
     </div>
   )
 }
