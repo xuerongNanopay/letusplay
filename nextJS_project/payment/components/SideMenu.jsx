@@ -2,7 +2,15 @@ import React from 'react'
 
 const SideMenu = () => {
   return (
-    <div>SideMenu</div>
+    <div className="">
+      <i>A</i>
+      <i>A</i>
+      <i>A</i>
+      <i>A</i>
+      <i>A</i>
+      <i>A</i>
+
+    </div>
   )
 }
 

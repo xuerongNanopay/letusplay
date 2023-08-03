@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 
 import Footer from '@components/Footer'
 import Nav from '@components/Nav'
+import Drawer from '@components/Drawer'
 import SideMenuWrapper from '@components/SideMenuWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="main">
           <Nav/>
+          <Drawer collapsed={false}/>
           <main className="">
             <SideMenuWrapper>
               {children}
