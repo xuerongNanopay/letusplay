@@ -4,7 +4,9 @@ const Content = ({children}) => {
   return (
     <div className="flex">
       <SideMenu/>
-      {children}
+      <div className=" flex-auto p-4">
+        {children}
+      </div>
     </div>
   )
 }
