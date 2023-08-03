@@ -7,10 +7,13 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 const Drawer = ({collapsed, setCollapsed}) => {
   return (
     <>
-      <div className={classNames({
-        'fixed h-screen w-screen z-20 bg-zinc-400': true,
-        'hidden': !!collapsed,
-      })}/>
+      <div 
+        className={classNames({
+          'fixed h-screen w-screen z-20 bg-zinc-400': true,
+          'hidden': !!collapsed,
+        })}
+        onClick={_ => setCollapsed(true)}
+      />
 
       <div
         className={classNames({
