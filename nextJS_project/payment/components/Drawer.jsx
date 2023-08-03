@@ -40,7 +40,8 @@ const Drawer = ({collapsed, setCollapsed}) => {
             new Array(60).fill('drawer menu').map((v, i) => (<i key={i}>{v}</i>))
           }
         </div>
-        <footer className="flex-none">
+        <footer className="flex-none flex flex-col border-t-4">
+          <i>footer</i>
           <i>footer</i>
         </footer>
       </div>
