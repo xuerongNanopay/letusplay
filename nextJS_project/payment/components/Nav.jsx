@@ -1,10 +1,10 @@
-import React from 'react'
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
-const Nav = () => {
+const Nav = ({collapsed, setCollapsed}) => {
   return (
-    <div className="lg:hidden h-16 border-2 border-red-900">
+    <nav className="lg:hidden h-16 px-1 py-2 border-2 border-red-900">
       TODO: this is header
-    </div>
+    </nav>
   )
 }
 
