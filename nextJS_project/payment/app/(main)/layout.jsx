@@ -7,8 +7,8 @@ import Drawer from '@components/Drawer'
 import SideMenuWrapper from '@components/SideMenuWrapper'
 
 export default function RootLayout({ children }) {
-  const [ collapsed, setCollapsed ] = useState(false)
-
+  const [ collapsed, setCollapsed ] = useState(true)
+  
   return (
     <div className="main">
       <Nav collapsed={collapsed} setCollapsed={setCollapsed}/>
