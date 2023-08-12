@@ -4,6 +4,12 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   root: 'src',
   build: {
-    outDir: '../target'
-  }
+    outDir: '../dist'
+  },
+  preview: {
+    port: 8080,
+  },
+  server: {
+    port: 3030,
+  },
 })
