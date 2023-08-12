@@ -1,4 +1,4 @@
-import { randomIntFromRange, randomColor, distance } from './utils'
+import { randomIntFromRange, randomColor, distance } from './utils/graph-math'
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
