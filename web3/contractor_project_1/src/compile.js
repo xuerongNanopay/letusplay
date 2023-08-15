@@ -6,7 +6,7 @@ import solc from 'solc'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const inboxPath = path.resolve(__dirname, '..', './contracts', 'inbox.sol')
+const inboxPath = path.resolve(__dirname, './contracts', 'Inbox.sol')
 const source = fs.readFileSync(inboxPath, 'utf-8')
 
 export default solc.compile(source, 1).contracts[':Inbox']
